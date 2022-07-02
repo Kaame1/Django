@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<body style="font-size: 30px">
+    <h1>OnScript</h1>
+    
+    <form  action="{% url 'password' %}">
+
+        <select name="lenght">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12" selected>12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+        </select>
+        <br>
+        
+        <label for="uppercase">Uppercase</label>
+        <input type="checkbox" id="uppercase" name="uppercase"> 
+        <br>
+        
+        <label for="number">Number</label>
+        <input type="checkbox" id="number" name="number"> 
+        <br>
+        
+        <label for="character">Character</label>
+        <input type="checkbox" id="character" name="character"> 
+        <br>
+        
+        <input type="submit" value="Generate password">
+    </form>
+    <a href="{% url 'about' %}">About</a>
+    {{fix_password}} 
+</body>
+</html>
